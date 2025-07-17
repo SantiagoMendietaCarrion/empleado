@@ -1,0 +1,13 @@
+<h1>Habilidades de empleado</h1>
+
+<form method="GET">{% csrf_token %}
+    <input type="number" id="kword" name="kword" min="1" placeholder="Ingrese el ID del empleado">
+    <button type="submit">Buscar</button>
+</form>
+
+<h3>Lista resultados</h3>
+<ul>
+    {% for h in habilidades%}
+        <li>{{h}}</li>
+    {%  endfor %}
+</ul>
